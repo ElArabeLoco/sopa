@@ -1,0 +1,122 @@
+body {
+    background: #306a8b;
+}
+
+.contenedorSopa {
+    width: 850px;
+    margin: 50px auto 0;
+}
+
+p {
+    font: 22pt sans-serif;
+    margin: 20px 20px 0px 45px;
+    color: #6891ad;
+}
+
+
+#sopa {
+    padding: 20px;
+    float: left;
+    margin: 30px 20px;
+    width: 500px; /* Este tamaño fijo hace que no se puedan crear sopas de letras muy anchas */
+}
+
+#sopa div {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Casillas del tablero */
+#sopa .casilla {
+    height: 30px;
+    width: 30px;
+    text-transform: uppercase;
+    background-color: #306a8b;
+    border: 0;
+    outline: none;
+    font: 1em sans-serif;
+    color: #6891ad;
+}
+
+
+
+/* Casilla seleccionada */
+#sopa .seleccionada {
+    color: #ee5426;
+    outline: none;
+
+    &:focus {
+        border: none;
+    }
+}
+
+/* Casilla de una letra de una palabra encontrada */
+#sopa .encontrada {
+    color: #c4c4c4;
+    border: 20px;
+}
+
+#sopa .solved {
+    color: #ee5426;
+}
+
+
+/* Todas las palabras encontradas */
+#sopa .completada {
+    background-color: green;
+}
+
+/**
+* Lista de palabras
+*/
+#lista-palabras {
+    // padding-top: 20px;
+    // -moz-column-count: 2;
+    // -moz-column-gap: 20px;
+    // -webkit-column-count: 2;
+    // -webkit-column-gap: 20px;
+    // column-count: 2;
+    // column-gap: 20px;
+    width: 250px;
+    color: #6891ad;
+    float: left;
+    margin-top: 37px;
+}
+
+#lista-palabras ul {
+    list-style-type: none;
+}
+
+#lista-palabras li {
+    padding: 0 0 7px;
+    font: 1em sans-serif;
+    display: inline-block;
+    float: left;
+    width: 100px;
+}
+
+/* Palabra encontrada */
+#lista-palabras .palabraEncontrada {
+    text-decoration: line-through;
+    color: #ee5426;
+}
+
+/**
+* Styles for the button
+*/
+#solve {
+    margin: 30px 30px 0 40px;
+
+    background: transparent;
+    color: #ee5426;
+    padding: 10px 20px;
+    border: 2px solid #ee5426;
+    border-radius: 25px;
+    opacity: .5;
+    transition: opacity .25s ease-in;
+
+    &:hover,
+    &.gameSolved {
+        opacity: 1;
+    }
+}
